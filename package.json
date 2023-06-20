@@ -12,21 +12,15 @@
 		"sst:dev": "sst dev"
 	},
 	"dependencies": {
-		"@astrojs/react": "^2.2.1",
 		"@astrojs/tailwind": "^4.0.0",
 		"@fontsource-variable/inter": "^5.0.3",
-		"@types/react": "^18.0.21",
-		"@types/react-dom": "^18.0.6",
 		"astro": "^2.6.5",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
-		"react-query": "^3.39.3",
 		"tailwindcss": "^3.3.2"
 	},
 	"devDependencies": {
-		"sst": "^2.14.0",
+		"astro-sst": "^2.14.0",
 		"aws-cdk-lib": "2.79.1",
 		"constructs": "10.1.156",
-		"astro-sst": "^2.14.0"
+		"sst": "^2.14.0"
 	}
 }

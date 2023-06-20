@@ -1,18 +1,11 @@
 ---
-export function getStaticPaths() {
-    return [
-        { params: { story: "newstories" } },
-        { params: { story: "beststories" } },
-        { params: { story: "askstories" } },
-        { params: { story: "showstories" } },
-        { params: { story: "jobstories" } },
-    ];
-}
 import StoriesPages from "../components/StoriesPages.astro";
 import Layout from "../layouts/Layout.astro";
 import { getStories } from "../lib/fetchData";
+
 const { story } = Astro.params;
 const stories = await getStories(story ?? "topstories");
+if (!stories) Astro.redirect("/notfound");
 ---
 
 <Layout title="Welcome to Astro.">
