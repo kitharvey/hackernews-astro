@@ -1,0 +1,12 @@
+---
+export interface Props {
+	id: number;
+}
+import Comment from "./Comment.astro";
+import { getItem } from "../../lib/fetchData.js";
+
+const { id } = Astro.props;
+const data = await getItem(id);
+---
+
+{data && <Comment data={data} />}

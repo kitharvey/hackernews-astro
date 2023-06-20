@@ -1,0 +1,15 @@
+---
+export interface Props {
+    posts: ListType;
+}
+
+import PostWrapper from "./Post/PostWrapper.astro";
+
+const { posts } = Astro.props;
+---
+
+<div class="grid gap-y-4">
+    <div class="">
+        {posts.map((item) => item && <PostWrapper id={item} />)}
+    </div>
+</div>

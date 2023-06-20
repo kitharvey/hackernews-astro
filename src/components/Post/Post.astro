@@ -1,0 +1,31 @@
+---
+export interface Props {
+    data: ItemType;
+}
+import { getTimePassed } from "../../lib/fetchTime";
+
+const { data } = Astro.props;
+const { by, title, time, id, score, kids, url } = data;
+const timePassed = getTimePassed(time);
+---
+
+<div class="p-4">
+    <div class="flex flex-col">
+        <a href={url ? url : `/item/${id}`}>
+            <p class="text-lg transition hover:text-orange-500">{title}</p>
+        </a>
+
+        <div class="flex gap-2">
+            <p class="text-xs text-gray-500">by {by}</p>
+            {time && <p class="text-xs text-gray-500">{timePassed}</p>}
+            <p class="text-center text-xs text-gray-500">
+                {score ? score : 0} points
+            </p>
+            <a href={`/item/${id}`}>
+                <p class="text-xs text-gray-500 hover:text-orange-500">
+                    {kids ? kids.length : 0} comments
+                </p>
+            </a>
+        </div>
+    </div>
+</div>

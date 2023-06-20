@@ -1,0 +1,39 @@
+---
+export interface Props {
+	data: ItemType;
+}
+import { getTimePassed } from "../../lib/fetchTime";
+import CommentWrapper from "./CommentWrapper.astro";
+const { data } = Astro.props;
+
+const { by, text, time, kids, deleted, dead } = data;
+const timePassed = getTimePassed(time);
+---
+
+<div class={`pt-8 max-w-full ${deleted || dead || !by ? "hidden" : ""}`}>
+	<div class="">
+		<div class="flex gap-2">
+			<p class="text-xs text-gray-500">by{" " + by}</p>
+			{time && <p class="text-xs text-gray-500">{timePassed}</p>}
+		</div>
+		{
+			text && (
+				<div
+					class="text-sm text-html"
+					set:html={text}
+				/>
+			)
+		}
+	</div>
+	{
+		kids &&
+			kids.map(
+				(reply) =>
+					reply && (
+						<div class="pl-4 border-l border-gray-700">
+							<CommentWrapper id={reply} />
+						</div>
+					)
+			)
+	}
+</div>

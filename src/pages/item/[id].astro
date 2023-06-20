@@ -1,0 +1,16 @@
+---
+import { getItem } from "../../lib/fetchData";
+import ItemPage from "../../components/ItemPage.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const { id } = Astro.params;
+const data = id ? await getItem(+id) : "";
+
+if (!data) Astro.redirect("/notfound");
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+        {data && <ItemPage item={data} />}
+    </main>
+</Layout>

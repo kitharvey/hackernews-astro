@@ -1,0 +1,16 @@
+2023-06-20T10:16:48.531Z  +4351ms [debug] Config loaded {"version":"2.14.0","cdkVersion":"2.79.1","constructsVersion":"10.1.156","config":{"name":"hackernews-astro","region":"us-east-1","stage":"jack","ssmPrefix":"/sst/hackernews-astro/jack/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":224,"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}]}},"outputs":{".sst.config.1687256205322.mjs":{"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":156}},"bytes":338}}},"paths":{"config":"C:\\Programs\\hackernews-astro\\sst.config.ts","root":"C:\\Programs\\hackernews-astro","out":"C:\\Programs\\hackernews-astro\\.sst","artifacts":"C:\\Programs\\hackernews-astro\\.sst\\artifacts"}}
+2023-06-20T10:16:48.786Z   +255ms [debug] Using AWS profile 
+2023-06-20T10:16:48.838Z    +52ms [debug] Created AWS client IoTClient
+2023-06-20T10:16:48.838Z     +0ms [debug] Getting IoT endpoint
+2023-06-20T10:16:49.983Z  +1145ms [debug] Using IoT endpoint: awh77xg2qmjzd-ats.iot.us-east-1.amazonaws.com
+2023-06-20T10:16:49.983Z     +0ms [debug] Initializing bootstrap context
+2023-06-20T10:16:49.984Z     +1ms [debug] Created AWS client CloudFormationClient
+2023-06-20T10:16:51.541Z  +1557ms [debug] Loaded bootstrap status
+2023-06-20T10:16:51.541Z     +0ms [debug] Bootstrap context initialized {"version":"7","bucket":"sstbootstrap-useast124d14e4b-9smyu5rjc1fo"}
+2023-06-20T10:16:51.542Z     +1ms [debug] Created AWS client S3Client
+2023-06-20T10:16:51.621Z    +79ms [debug] Fetching all metadata
+2023-06-20T10:16:52.678Z  +1057ms [debug] IoT connected
+2023-06-20T10:16:53.046Z   +368ms [debug] Fetched metadata from 1 stacks
+2023-06-20T10:16:53.050Z     +4ms [debug] Created AWS client LambdaClient
+2023-06-20T10:16:54.224Z  +1174ms [debug] Created AWS client STSClient
+2023-06-20T10:16:55.298Z  +1074ms [debug] Failed to assume arn:aws:iam::584125941279:role/jack-hackernews-astro-Sit-siteServerFunctionRole1F-10I7VS3I8B3DY. {"name":"AccessDenied","$fault":"client","$metadata":{"httpStatusCode":403,"requestId":"423e0221-21d0-438a-aa7f-b8490190e5f9","attempts":1,"totalRetryDelay":0},"Type":"Sender","Code":"AccessDenied","message":"Roles may not be assumed by root accounts."}

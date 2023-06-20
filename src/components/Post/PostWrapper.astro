@@ -1,0 +1,22 @@
+---
+export interface Props {
+    id: number;
+}
+import Post from "./Post.astro";
+import PostLoader from "./PostLoader.astro";
+import { getItem } from "../../lib/fetchData";
+
+const { id } = Astro.props;
+
+const data = await getItem(id);
+---
+
+{
+    data ? (
+        !data.deleted &&
+        !data.dead &&
+        data.type != "comment" && <Post data={data} />
+    ) : (
+        <PostLoader />
+    )
+}
