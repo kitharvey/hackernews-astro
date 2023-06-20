@@ -6,7 +6,7 @@ import { getStories } from "../lib/fetchData";
 const stories = await getStories("topstories");
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout>
 	<main>
 		{stories && <StoriesPages posts={stories} />}
 	</main>

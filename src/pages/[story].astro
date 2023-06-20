@@ -8,7 +8,7 @@ const stories = await getStories(story ?? "topstories");
 if (!stories) Astro.redirect("/notfound");
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout>
     <main>
         {stories && <StoriesPages posts={stories} />}
     </main>

@@ -9,7 +9,7 @@ const data = id ? await getItem(+id) : "";
 if (!data) Astro.redirect("/notfound");
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout>
     <main>
         {data && <ItemPage item={data} />}
     </main>
