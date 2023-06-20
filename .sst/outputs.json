@@ -1,3 +1,5 @@
 {
-  "jack-hackernews-astro-Site": {}
+  "prod-hackernews-astro-Site": {
+    "url": "https://d1a44ukoda9gse.cloudfront.net"
+  }
 }
