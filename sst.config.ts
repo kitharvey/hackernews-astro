@@ -14,19 +14,7 @@ export default {
 			const arn =
 				"arn:aws:acm:us-east-1:584125941279:certificate/1c487774-af0e-4c63-adce-562f1cda20bc";
 
-			const site = new AstroSite(stack, "site", {
-				customDomain: {
-					isExternalDomain: true,
-					domainName: "hackernews-astro.kitharvey.cc",
-					cdk: {
-						certificate: Certificate.fromCertificateArn(
-							stack,
-							"Certificate",
-							arn
-						),
-					},
-				},
-			});
+			const site = new AstroSite(stack, "site");
 			stack.addOutputs({
 				url: site.url,
 			});
